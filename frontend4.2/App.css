@@ -1,0 +1,467 @@
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<----------------------------------------------default styling settings-------------------------------------------->*/
+html{
+    min-height: 100%;
+}
+body{
+    background-image: url("Images/background.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+input{
+    outline: none;
+    background: #dffcfc;
+    text-align: center;
+    font-weight: lighter;
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    border:2px solid #3498db;
+    transition: 0.25s;
+}
+input:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+h1{
+    font-size: 35px;
+    font-weight: normal;
+    color: white;
+    text-shadow: black 0px 0px 10px;
+}
+h2{
+    font-size: 25px;
+    font-weight: normal;
+    color: white;
+    text-shadow: black 0px 0px 10px;
+}
+p{
+    font-size: 15px;
+    color: white;
+    text-shadow: black 0px 0px 10px;
+    font-weight: normal;
+    display: inline;
+}
+button{
+    background-color: #e7e7e7;
+    border: none;
+    color: black;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+button:hover{
+    background-color: #4CAF50;
+    color: white;
+}
+button:focus{
+    background: #f68497;
+}
+li {
+    display: inline;
+}
+img{
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 200px;
+}
+footer{
+    padding: 1rem;
+    background-color: #34495e;
+    color:#fff;
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    display: inline;
+    overflow: hidden;
+    border-radius: 2px;
+    transition: 1s;
+    width: 400px;
+    margin-left: -395px;
+}
+footer:hover{
+    margin-left: 0%;
+}
+footer:hover i{
+    display: none;
+}
+input[name = "r"]{
+    position: absolute;
+    visibility: hidden;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<---------------------------------------------hints styling settings----------------------------------------------->*/
+#exclamation{
+    padding-left: 10px;
+}
+.exclamation-cover{
+    display: inline;
+}
+.exclamation-cover:hover .hint{
+    padding: 5px;
+    margin-left: 10px;
+    border:2px solid #3498db;
+    width: auto;
+    height: auto;
+    display: inline;
+}
+.hint{
+    color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #3498db;
+    display:inline-block;
+    width: 0;
+    height: 0;
+    margin: 0;
+    transition: 1.5s; /* Add transition on hover */
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<--------------------------------------top navigation navlinks styling settings------------------------------------>*/
+.navBar:link, .navBar:visited {
+    color: white;
+    font-size: 120%;
+    margin: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+.navBar:hover, .navBar:focus {
+    color: pink;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<------------------------------------top navigation default styling settings--------------------------------------->*/
+.topNav{
+    background: black;
+    overflow: hidden;
+    display: flex;
+    height: 5%;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<------------------------------------top navigation display settings + positioning--------------------------------->*/
+.subNavBtn{
+    overflow: hidden;
+    height: 0;
+    position: absolute;
+    transition: 0.3s; /* Add transition on hover */
+    transform: translate(-100%,9%);
+    background: white;
+}
+.dropdowns:hover .subNavBtn{
+    height: auto;
+    width: auto;
+    display: inline-flex;
+}
+.middle-nav{
+    padding-right: 0;
+    padding-left: 7.5%;
+    padding-top: 0.3%;
+    width: fit-content;
+    height: fit-content;
+}
+.logo{
+    height: 40px;
+    width: 180px;
+    margin-top: 8%;
+    margin-left: 5%;
+    border-radius: 5px;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<-----------------------------------------top nav dropdown styling settings---------------------------------------->*/
+.styled-buttons{
+    background: none;
+    text-align: left;
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    white-space: nowrap;
+    padding: 5px;
+}
+.styled-buttons:hover{
+    background: none;
+    color: #ff9862;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<------------------------------------top nav dropdown border settings----------------------------------------------->*/
+.faculty{
+    border-bottom: 5px solid #ff7600;
+    border-top: 5px solid #ff7600;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<--------------------------------------top navigation faculty titles styling--------------------------------------->*/
+.title{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #ff7600;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<-------------------------------------------help text styling settings--------------------------------------------->*/
+.text{
+    margin-left: 25%;
+    margin-top: 10%;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<-----------------------------login/register inputs components default styling settings---------------------------->*/
+.login-register-component{
+    margin-left: 100px;
+    margin-top: 100px;
+    display: flex;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<-------------------------------------------login screen styling settings------------------------------------------>*/
+.login{
+    display: table;
+    padding-bottom: 10px;
+    border-radius: 4px;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<-------------------------------------------professor styling default---------------------------------------------->*/
+.professor{
+    color: #3498db;
+    font-size: 12px;
+    padding: 25px;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<-------------------------------------------titles sizing styling choices------------------------------------------>*/
+#big-titles{
+    font-size: 25px;
+}
+#huge-titles{
+    font-size: 50px;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<------------------------------------------------faculties sizing box---------------------------------------------->*/
+.faculties{
+    width: auto;
+    height: 750px;
+    overflow: hidden;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<-----------------------------------------------sliding bar styling settings--------------------------------------->*/
+.bar{
+    width: 30px;
+    height: 5px;
+    margin-right: 1%;
+    cursor: pointer;
+    background: white;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<----------------------------------------------faculties logo styling---------------------------------------------->*/
+.faculty-logo-container{
+    background: #3498db;
+    padding-top: 30px;
+}
+.faculty-logo-container #faculty-logo{
+    margin-top: auto;
+    width: 1000px;
+    height: 700px;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<---------------------------------------------sliders styling settings--------------------------------------------->*/
+.slides-navigation{
+    position: relative;
+    left: 45%;
+    bottom: 40px;
+    display: flex;
+}
+.slide{
+    animation: colorchange 175s linear 1s infinite;
+    border-top: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+    transition: 1s;
+}
+.slides{
+    background: black;
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.slide .styled-buttons{
+    color: white;
+    display: block;
+    text-align: center;
+}
+.slide .styled-buttons:hover{
+    color:orange;
+}
+.slides-arrows #right{
+    position: relative;
+    font-size: 30px;
+    color: white;
+    bottom: 400px;
+    right:-90%;
+}
+.slides-arrows #left{
+    position: relative;
+    bottom: 400px;
+    color: white;
+    font-size: 30px;
+    right:-5%;
+}
+.slides-arrows #right:hover, #left:hover{
+    cursor: pointer;
+    color: silver;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<-----------------------------------------------------slider states------------------------------------------------>*/
+.r1:checked ~.s1 {
+    margin-left: 0;
+}
+.r2:checked ~.s1 {
+    margin-left: -20%;
+}
+.r3:checked ~.s1 {
+    margin-left: -40%;
+}
+.r4:checked ~.s1 {
+    margin-left: -60%;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<-----------------------------------------------school flip cards ------------------------------------------------->*/
+.school-logo{
+    border-radius: 15px;
+    width: 325px;
+    height: 325px;
+}
+.school-container{
+    margin: 2rem;
+    width: 325px;
+    height: 325px;
+}
+.school-container:hover > .front{
+    transform: perspective(600px)rotateY(-180deg);
+}
+.school-container:hover > .back{
+    transform: perspective(600px)rotateY(0deg);
+}
+.school-description{
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    width: 325px;
+    height: 325px;
+    color: white;
+    background-image: url("./Images/school background.jpg");
+    background-size: 325px;
+}
+#school-text{
+    margin-top: 2%;
+    width: 75%;
+    font-size: 13px;
+}
+.front,.back{
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .2s linear;
+}
+.back{
+    transform: perspective(600px)rotateY(180deg);
+}
+.front{
+    transform: perspective(600px)rotateY(0deg);
+}
+#schools {
+    margin-left: 7%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.school-name{
+    position: absolute;
+    top:82%;
+    right:0;
+    font-size: 20px;
+    color: #ffffff;
+    width: 325px;
+    background: #0090ff;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*<-------------------------------------------------animation/resizings---------------------------------------------->*/
+@keyframes colorchange {
+    0%   {background: darkslategrey; color: white;}
+    10%  {background: darkred; color: white;}
+    20%  {background: darkmagenta; color: white;}
+    30% {background: darkgreen; color: white;}
+    40%   {background: darkred; color: white;}
+    50%  {background: darkgoldenrod; color: white;}
+    60%  {background: darkblue; color: white;}
+    70% {background: darkcyan; color: white;}
+    80%   {background: darkkhaki; color: white;}
+    90%  {background: darkolivegreen; color: white;}
+    100%  {background: darkslategrey; color: white;}
+}
+@media screen and (max-width: 1500px) {
+    li, .topNav{
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
+        display: grid;
+        font-size: 25px;
+    }
+    .leftNav{
+        margin-left: 7%;
+    }
+    .rightNav{
+        margin-right: 8%;
+    }
+    .login-register-component{
+        display: grid;
+    }
+    .text{
+        position: inherit;
+    }
+    .logo{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+    .dropdowns:hover .subNavBtn{
+        height: 250px;
+        width: auto;
+        overflow: auto;
+        border-radius: 5px;
+        display: grid;
+    }
+    .subNavBtn{
+        overflow: hidden;
+        height: 0;
+        position: absolute;
+        transition: 0.3s; /* Add transition on hover */
+        transform: translate(9%);
+        background: white;
+    }
+    .logo{
+        padding-left: 23%;
+    }
+    .styled-buttons{
+        font-size: 10px;
+    }
+    .professor{
+        font-size: 5px;
+        padding: 5px;
+    }
+    .faculty{
+        width: 400px;
+    }
+}
+
+
+
+
+
+
+
+
+
