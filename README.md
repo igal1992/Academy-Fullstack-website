@@ -1,2 +1,2 @@
 # Web-Project
-fullstack web project combining react,js express and mongodb
+fullstack web project combining react,js express and mysql
