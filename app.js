@@ -18,7 +18,7 @@ require('dotenv').config();
 
 //establish server uses
 app.use(cors({
-    origin: 'https://blacknightacademy.netlify.app',
+    origin: 'https://blacknightacademy.netlify.app'||'http://localhost:3000',
     methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD'],
     credentials: true
   }));
