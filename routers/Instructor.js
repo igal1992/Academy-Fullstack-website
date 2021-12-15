@@ -11,19 +11,24 @@ Router.post("/api/register/instructor", (req, res) => {
     let qb = req.body;
     qb.id = uuidv1();
     const validate = "SELECT username FROM instructor WHERE username = ?"
+    const validate_student = "SELECT username FROM student WHERE username = ?"
     const sql = "INSERT INTO instructor SET ?"
     bcrypt.hash(qb.password,10,(err,hash)=>{
       if(!err){
         qb.password = hash
         mysqlConnection.query(validate,qb.username,(err,rows,fields)=>{
           if(rows.length == 0){
-            mysqlConnection.query(
-              sql, qb,
-              (err, rows, fields) => {
-                if (!err) {
-                  return res.status(200).send("user created!");
-                } else {
-                  return res.status(500);}});
+            mysqlConnection.query(validate_student,qb.username,(err,rows,fields)=>{
+              if(rows.length == 0){
+                mysqlConnection.query(
+                  sql, qb,
+                  (err, rows, fields) => {
+                    if (!err) {
+                      return res.status(200).send("user created!");
+                    } else {
+                      return res.status(500);}});
+                    }else{
+                      return res.status(406).send("user exists!");}})
           }else{
             return res.status(406).send("user exists!")}});
       }})
@@ -40,6 +45,10 @@ Router.post("/api/login/instructor",(req,res) =>{
         bcrypt.compare(qb.password,rows[0].password,(err,result)=>{
           if (result){
             req.session.user = user;
+            req.session.user = user;
+            req.session.user.department = rows[0].department_name;
+            req.session.user.first_name = rows[0].first_name;
+            req.session.user.last_name = rows[0].last_name;
             req.session.save();
             return res.status(200).send("login successfuly!")
           }else{
