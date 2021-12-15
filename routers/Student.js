@@ -49,6 +49,7 @@ Router.post("/api/login/student",(req,res) =>{
               first_name = rows[0].first_name,
               last_name = rows[0].last_name,
             }
+            
             req.session.user = user;
             req.session.user.course = rows[0].course;
             req.session.user.first_name = rows[0].first_name;
