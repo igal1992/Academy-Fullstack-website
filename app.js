@@ -30,7 +30,7 @@ app.use(session({
     key:"user",
     secret:process.env.SECRET_SESSION_KEY,
     saveUninitialized:false,
-    cookie:{maxAge:oneDay, secure:true, httpOnly: true, path:"/", domain:"herokuapp.com"},
+    cookie:{maxAge:oneDay, secure:true, httpOnly: true, path:"/"},
     resave:false
 }));
 app.use(student);
