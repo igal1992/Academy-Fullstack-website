@@ -44,12 +44,12 @@ Router.post("/api/login/student",(req,res) =>{
         bcrypt.compare(user.password,rows[0].password,(err,result)=>{
           if (result){
             const session = {
-              username =  user,
+              username = user.username,
               course = rows[0].course,
               first_name = rows[0].first_name,
               last_name = rows[0].last_name,
             }
-            
+
             req.session.user = user;
             req.session.user.course = rows[0].course;
             req.session.user.first_name = rows[0].first_name;
