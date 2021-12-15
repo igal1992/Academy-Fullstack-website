@@ -29,7 +29,7 @@ app.use(session({
     key:"user",
     secret:process.env.SECRET_SESSION_KEY,
     saveUninitialized:false,
-    cookie:{maxAge:oneDay, secure:false, httpOnly: true},
+    cookie:{maxAge:oneDay, secure:true, httpOnly: true},
     resave:false
 }));
 app.use(student);
