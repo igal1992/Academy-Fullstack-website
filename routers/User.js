@@ -10,21 +10,6 @@ Router.get('/user/session', (req,res) =>{
     return res.status(200).send("login session maintained")
 });
 
-//destroy session of user
-Router.post('/user/logout',(req,res)=>{
-    req.session.destroy();
-});
-
-Router.get('/user/details',(req,res)=>{
-  if(req.session.user){
-    return res.send({
-      "username":req.session.user.username,
-      "course":req.session.user.course,
-      "first_name":req.session.user.first_name,
-      "last_name":req.session.user.last_name,})
-  }
-});
-
 //delete account by username
 Router.post("/user/deleteUser/:username",(req,res) =>{
   const sql_student = "SELECT * FROM student WHERE username = ?";

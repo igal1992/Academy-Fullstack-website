@@ -44,13 +44,13 @@ Router.post("/api/login/instructor",(req,res) =>{
       if(rows.length != 0){
         bcrypt.compare(qb.password,rows[0].password,(err,result)=>{
           if (result){
-            req.session.user = user;
-            req.session.user = user;
-            req.session.user.department = rows[0].department_name;
-            req.session.user.first_name = rows[0].first_name;
-            req.session.user.last_name = rows[0].last_name;
-            req.session.save();
-            return res.status(200).send("login successfuly!")
+            const session = {
+              username: user.username,
+              department: rows[0].department_name,
+              first_name: rows[0].first_name,
+              last_name: rows[0].last_name,
+            }
+            return res.status(200).send(session);
           }else{
             return res.status(400).send("login failed!")}})
       }else{
