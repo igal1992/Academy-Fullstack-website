@@ -47,7 +47,6 @@ Router.post("/api/login/student",(req,res) =>{
             req.session.user.course = rows[0].course;
             req.session.user.first_name = rows[0].first_name;
             req.session.user.last_name = rows[0].last_name;
-            console.log(req.session.user)
             req.session.save();
             return res.status(200).send("login successfully!");
           }else{
