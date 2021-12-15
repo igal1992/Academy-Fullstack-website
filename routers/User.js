@@ -4,7 +4,6 @@ const Router = express.Router();
 
 //check session of user
 Router.get('/user/session', (req,res) =>{
-    console.log(req.session.user)
     if(!req.session.user){
       return res.status(401).send("you are unauthorized to access this location!");
     }
