@@ -43,11 +43,17 @@ Router.post("/api/login/student",(req,res) =>{
       if(rows.length != 0){
         bcrypt.compare(user.password,rows[0].password,(err,result)=>{
           if (result){
+            const session = {
+              username =  user,
+              course = rows[0].course,
+              first_name = rows[0].first_name,
+              last_name = rows[0].last_name,
+            }
             req.session.user = user;
             req.session.user.course = rows[0].course;
             req.session.user.first_name = rows[0].first_name;
             req.session.user.last_name = rows[0].last_name;
-            return res.status(200).send("login successfully!");
+            return res.status(200).send(session);
           }else{
             return res.status(406).send("login failed!")}})
       }else{
