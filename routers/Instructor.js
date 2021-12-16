@@ -52,9 +52,11 @@ Router.post("/api/login/instructor",(req,res) =>{
             }
             return res.status(200).send(session);
           }else{
-            return res.status(400).send("login failed!")}})
+            return res.status(406).send("login failed!")}})
       }else{
-        return res.status(404)}}});
+        return res.status(404).send("user not found!")
+      }
+      }});
 });
 
 
