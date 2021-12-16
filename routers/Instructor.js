@@ -50,7 +50,6 @@ Router.post("/api/login/instructor",(req,res) =>{
               first_name: rows[0].first_name,
               last_name: rows[0].last_name,
             }
-            console.log(rows[0])
             return res.status(200).send(session);
           }else{
             return res.status(400).send("login failed!")}})
