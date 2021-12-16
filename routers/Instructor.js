@@ -38,7 +38,7 @@ Router.post("/api/register/instructor", (req, res) => {
 Router.post("/api/login/instructor",(req,res) =>{
   let user = req.body;
   let qb = req.body;
-  const sql = "SELECT username,password FROM instructor WHERE username = ?"
+  const sql = "SELECT * FROM instructor WHERE username = ?"
   mysqlConnection.query(sql,qb.username,(err,rows,fields)=>{
     if(!err){
       if(rows.length != 0){
