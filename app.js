@@ -19,7 +19,7 @@ require('dotenv').config();
 //https://blacknightacademy.netlify.app
 //https://blacknightacademy.herokuapp.com
 app.use(cors({
-    origin: 'https://blacknightacademynew.herokuapp.com',
+    origin: 'https://igalacademy.herokuapp.com',
     methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD'],
     credentials: true
   }));
