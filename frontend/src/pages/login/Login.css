@@ -1,0 +1,49 @@
+.login-register-component {
+	background-image: url('../../assets/Images/login-register.jpg');
+	height: 100vh;
+	width: 100vw;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.login-register {
+	width: 15vw;
+	height: 6vh;
+	background: green;
+	color: #fff;
+	font-size: 1vw;
+	border: .04vw solid #00f;
+	border-radius: .25vw
+}
+
+.login-register:hover {
+	border: .125vw solid red
+}
+
+.register_classes {
+	width: 12.5vw;
+	height: 5.5vh;
+	margin-right: 7%;
+	background: #dffcfc;
+	border-radius: 1vw;
+	border: .125vw solid #3498db;
+	font-size: 1vw
+}
+
+.login {
+	margin: auto;
+	border-radius: 1vw;
+	border: .25vw double #000;
+	width: 22vw;
+	height: 50vh;
+	background: rgb(0, 72, 131);
+	text-align: center;
+	margin-top: 2%;
+}
+
+.login-register-header {
+	margin-bottom: 10%
+}

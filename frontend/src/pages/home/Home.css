@@ -1,0 +1,85 @@
+.school-logo {
+	border-top-right-radius: 10%;
+	border-bottom-left-radius: 10%;
+	width: 29.5vw;
+	height: 43vh
+}
+
+.school-container {
+	margin: .25vw;
+	width: 29.5vw;
+	height: 43vh
+}
+
+.school-container:hover>.front {
+	-webkit-transform: perspective(29.5vw)rotateY(-180deg);
+	transform: perspective(29.5vw)rotateY(-180deg)
+}
+
+.school-container:hover>.back {
+	-webkit-transform: perspective(29.5vw)rotateY(0deg);
+	transform: perspective(29.5vw)rotateY(0deg)
+}
+
+.school-description {
+	border-top-right-radius: 10%;
+	border-bottom-left-radius: 10%;
+	display: flex;
+	justify-content: center;
+	width: 29.5vw;
+	height: 43vh;
+	color: #fff;
+	background-image: url('../../assets/Images/school\ background.jpg');
+	background-size: cover
+}
+
+#school-text {
+	margin-top: 3%;
+	width: 95%;
+	height: 90%;
+	overflow: auto;
+	font-size: 1.2vw
+}
+
+.back,
+.front {
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	transition: -webkit-transform .2s linear;
+	transition: transform .2s linear;
+	transition: transform .2s linear, -webkit-transform .2s linear
+}
+
+.back {
+	-webkit-transform: perspective(29.5vw)rotateY(180deg);
+	transform: perspective(29.5vw)rotateY(180deg)
+}
+
+.front {
+	-webkit-transform: perspective(29.5vw)rotateY(0deg);
+	transform: perspective(29.5vw)rotateY(0deg)
+}
+#schools {
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 15%;
+}
+
+.school-name {
+	position: absolute;
+	top: 76%;
+	right: 0;
+	padding-top: .6vh;
+	padding-bottom: .6vh;
+	font-size: 1.15vw;
+	color: #fff;
+	width: 30vw;
+	background: #0090ff
+}
+.home {
+	background: url('../../assets/Images/background.jpg') no-repeat 50% fixed;
+	background-size: cover
+}
