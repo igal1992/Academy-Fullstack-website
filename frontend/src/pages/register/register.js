@@ -27,9 +27,9 @@ class register extends React.Component {
     async componentDidMount(){
         document.title = "BL Academy - Register";
         try{
-            const response_course = await fetch("http://localhost:8080/api/course/getData");
-            const response_accountDescription = await fetch(`http://localhost:8080/api/accountDescription/getData/`); 
-            const response_department = await fetch("http://localhost:8080/api/department/getData");
+            const response_course = await fetch("https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/course/getData");
+            const response_accountDescription = await fetch(`https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/accountDescription/getData/`); 
+            const response_department = await fetch("https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/department/getData");
             const json_course = await response_course.json();
             const json_department = await response_department.json();
             const json_accountDescription = await response_accountDescription.json();
@@ -110,7 +110,7 @@ class register extends React.Component {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(registered)
             };
-            fetch("http://localhost:8080/api/register/student",requestOptions)
+            fetch("https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/register/student",requestOptions)
             .then(response => {
                 if (response.ok !== true) {
                     this.setState({
@@ -150,7 +150,7 @@ class register extends React.Component {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(registered)
             };
-            fetch("http://localhost:8080/api/register/instructor",requestOptions)
+            fetch("https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/register/instructor",requestOptions)
             .then(response => {
                 if (response.ok !== true) {
                     this.setState({
@@ -176,7 +176,7 @@ class register extends React.Component {
 
     render() {
         return (
-            <div className={"login-register-component"}>
+            <div className={"register-component"}>
                 {this.updateFaculties()}
                 <div className={"register"}>
                     <h1 className={"login-register-header"}>Register {this.state.studentButton ? " - Student": " - Instructor"}</h1>

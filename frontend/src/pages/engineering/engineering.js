@@ -17,7 +17,7 @@ class Engineering extends React.Component{
         document.title = "BL Academy - Engineering Diplomas";
         let engi_faculty = "Engi Faculty"
         try{
-            const response_engiFaculty = await fetch(`http://localhost:8080/api/course/getDataByDepartmentName/`+ engi_faculty); 
+            const response_engiFaculty = await fetch(`https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/course/getDataByDepartmentName/`+ engi_faculty); 
             const json_engiFaculty = await response_engiFaculty.json();
             this.setState({
                 Engi:json_engiFaculty

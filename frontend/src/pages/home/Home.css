@@ -6,7 +6,7 @@
 }
 
 .school-container {
-	margin: .25vw;
+	margin: .5vw;
 	width: 29.5vw;
 	height: 43vh
 }
@@ -65,7 +65,8 @@
 	justify-content: center;
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 15%;
+	margin-top: 5%;
+	padding-bottom: 5%;
 }
 
 .school-name {
@@ -82,4 +83,13 @@
 .home {
 	background: url('../../assets/Images/background.jpg') no-repeat 50% fixed;
 	background-size: cover
+}
+#home-header{
+	padding-top: 5%;
+}
+#home-header h1,#home-header h2{
+font-size: 1.5vw;
+}
+#home-header h3{
+	font-size: 2vw;
 }

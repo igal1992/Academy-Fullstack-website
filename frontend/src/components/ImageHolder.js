@@ -1,5 +1,4 @@
 import architecturalE from '../assets/Images/architectural engineering.jpg';
-import chemicalE from '../assets/Images/chemical engineering.jpg';
 import enviromantalE from '../assets/Images/enviromantal engineering.jpg';
 import geotechnicalE from '../assets/Images/geotechnical engineering.jpg';
 import computer_science from '../assets/Images/computer science.jpg';
@@ -14,5 +13,21 @@ import psychology from '../assets/Images/psychology.jpg';
 import public_health_care from '../assets/Images/public health care.png';
 import sociology from '../assets/Images/sociology and anthropology.jpg';
 import chemistry from '../assets/Images/chemistry.jpg';
-const imagesGroup = [architecturalE,chemicalE,enviromantalE,geotechnicalE,computer_science,criminology,biology,accounting,capital_market,logistics,nursing,nutrition_science,psychology,public_health_care,sociology,chemistry];
+const imagesGroup = {
+    "Architectural Engineering":architecturalE,
+    "Environmental Engineering":enviromantalE,
+    "Geotechnical Engineering":geotechnicalE,
+    "Computer Science":computer_science,
+    "Criminology":criminology,
+    "Biology":biology,
+    "Economics and Accounting":accounting,
+    "Economics and Capital market":capital_market,
+    "Economics and logistics":logistics,
+    "Nursing":nursing,
+    "Nutrition Science":nutrition_science,
+    "Psychology":psychology,
+    "Public Health Care":public_health_care,
+    "Sociology and Anthropology":sociology,
+    "Chemistry":chemistry
+};
 export default imagesGroup;

@@ -27,9 +27,9 @@ class TopNav extends React.Component{
     async componentDidMount(){
         let engi_faculty = "Engi Faculty"
         try{
-            const response_course = await fetch("http://localhost:8080/api/course/getData");
-            const response_coursesByName = await fetch(`http://localhost:8080/api/course/getDataByDepartmentName/`+ engi_faculty); 
-            const response_department = await fetch("http://localhost:8080/api/department/getData");
+            const response_course = await fetch("https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/course/getData");
+            const response_coursesByName = await fetch(`https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/course/getDataByDepartmentName/`+ engi_faculty); 
+            const response_department = await fetch("https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/department/getData");
             const json_course = await response_course.json();
             const json_department = await response_department.json();
             const json_coursesByName = await response_coursesByName.json();
@@ -98,10 +98,10 @@ class TopNav extends React.Component{
             body: JSON.stringify(loggedIn)
         };
         if(this.state.courseOfUser){
-            fetch("http://localhost:8080/api/login/student",requestOptions)
+            fetch("https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/login/student",requestOptions)
             .then(response => {
                 if(response.status === 200){
-                    fetch(`http://localhost:8080/user/deleteUser/` + username, { method: 'POST' });
+                    fetch(`https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/user/deleteUser/` + username, { method: 'POST' });
                     Cookies.remove("user");
                     var history = this.props.history;
                     window.location.reload(history.push(""));
@@ -109,10 +109,10 @@ class TopNav extends React.Component{
                     swal("wrong password or username");
                 }})
     }else{
-        fetch("http://localhost:8080/api/login/instructor",requestOptions)
+        fetch("https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/login/instructor",requestOptions)
         .then(response => {
             if(response.status === 200){
-                fetch(`http://localhost:8080/user/deleteUser/` + username, { method: 'POST' });
+                fetch(`https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/user/deleteUser/` + username, { method: 'POST' });
                 Cookies.remove("user");
                 var history = this.props.history;
                 window.location.reload(history.push(""));
@@ -195,7 +195,7 @@ class TopNav extends React.Component{
                     </li>
                 </ul>
                 <div id = {"right-nav"}>
-                    {this.state.loggedIn?<div>
+                    {this.state.loggedIn?<div id = {"right-nav-container"}>
                         <p className={"dropdowns"}>{`hello ${this.state.firstNameOfUser}  ${this.state.lastNameOfUser} `}<i className="fa fa-caret-down"/>
                             <ul className = {"subNavBtnLoggedIn"}>
                                 <li>{this.state.courseOfUser?`  -  course: ${this.state.courseOfUser} -  `:`  -  department: ${this.state.departmentOfUser} -  `}</li>

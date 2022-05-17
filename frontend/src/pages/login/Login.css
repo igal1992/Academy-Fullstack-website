@@ -1,5 +1,5 @@
-.login-register-component {
-	background-image: url('../../assets/Images/login-register.jpg');
+.login-component {
+	background-image: linear-gradient(360deg,white 40%,transparent 60%),url('../../assets/Images/login-register.jpg');
 	height: 100vh;
 	width: 100vw;
 	background-position: 50%;

@@ -43,7 +43,7 @@ class LoginScreen extends React.Component{
             credentials:  "include",
             body: JSON.stringify(loggedIn)
         };
-        fetch("http://localhost:8080/api/login/instructor",requestOptions)
+        fetch("https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/login/instructor",requestOptions)
         .then(response => {
             if(response.status === 200){
                 response.json().then(data => {
@@ -79,7 +79,7 @@ class LoginScreen extends React.Component{
             credentials:  "include",
             body: JSON.stringify(loggedIn)
         };
-        fetch("http://localhost:8080/api/login/student",requestOptions)
+        fetch("https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/login/student",requestOptions)
         .then(response => {
             if(response.status === 200){
                 response.json().then(data => {
@@ -126,7 +126,7 @@ class LoginScreen extends React.Component{
         })
     }
     render(){
-        return <div className = {"login-register-component"}>
+        return <div className = {"login-component"}>
                 <div className = {"login"}>
                     <h1 className={"login-register-header"}>Login {this.state.studentButton ? " - Student": " - Instructor"}</h1>
                     <div className = {"login-method"}>

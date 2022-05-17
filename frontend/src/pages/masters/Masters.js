@@ -23,10 +23,10 @@ class Masters extends React.Component{
         let social_faculty = "Social Faculty"
         let science_faculty = "Science Faculty"
         try{
-            const response_healthFaculty = await fetch(`http://localhost:8080/api/course/getDataByDepartmentName/`+ health_faculty); 
-            const response_businessFaculty = await fetch(`http://localhost:8080/api/course/getDataByDepartmentName/`+ business_faculty); 
-            const response_socialFaculty = await fetch(`http://localhost:8080/api/course/getDataByDepartmentName/`+ social_faculty); 
-            const response_scienceFaculty = await fetch(`http://localhost:8080/api/course/getDataByDepartmentName/`+ science_faculty); 
+            const response_healthFaculty = await fetch(`https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/course/getDataByDepartmentName/`+ health_faculty); 
+            const response_businessFaculty = await fetch(`https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/course/getDataByDepartmentName/`+ business_faculty); 
+            const response_socialFaculty = await fetch(`https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/course/getDataByDepartmentName/`+ social_faculty); 
+            const response_scienceFaculty = await fetch(`https://64ro0p4yue.execute-api.us-east-2.amazonaws.com/api/course/getDataByDepartmentName/`+ science_faculty); 
             const json_healthFaculty = await response_healthFaculty.json();
             const json_businessFaculty = await response_businessFaculty.json();
             const json_socialFaculty = await response_socialFaculty.json();
