@@ -1,5 +1,6 @@
 import * as React from "react";
 import './Home.css';
+import imagesGroup from "../../components/ImageHolder";
 import { withRouter } from 'react-router';
 
 
