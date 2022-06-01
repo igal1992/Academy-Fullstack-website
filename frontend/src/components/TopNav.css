@@ -1,0 +1,162 @@
+.topNav {
+	background: #000;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 2%;
+}
+.navBar:link,
+.navBar:visited {
+	color: #fff;
+	font-size: 1.2vw;
+	margin-left: .25vw;
+	margin-right: .25vw;
+	text-align: center;
+	text-decoration: none;
+}
+
+.navBar:hover {
+	color: pink
+}
+
+.activeNavLink {
+	border-bottom: .01vw solid #ff7600
+}
+.subNavBtn, .subNavBtn-master {
+	transition: .3s;
+	-webkit-transform: translate(-70%, 6.5%);
+	transform: translate(-70%, 6.5%);
+}
+.subNavBtn-engi{
+	transition: .3s;
+	-webkit-transform: translate(-100%, 8%);
+	transform: translate(-100%, 8%);
+}
+
+.subNavBtn,
+.subNavBtnLoggedIn,
+.subNavBtn-engi,
+.subNavBtn-master
+{
+	overflow: hidden;
+	height: 0;
+	position: absolute;
+	background: #fff
+}
+
+.subNavBtnLoggedIn {
+	color: #000;
+	padding: 0;
+	margin: 0
+}
+
+#deleteForm {
+	display: grid;
+	background: #000
+}
+
+#deleteForm button,
+#deleteForm input {
+	width: 70%;
+	margin: auto auto 1%
+}
+
+.subNavBtnLoggedIn li:hover {
+	color: #ff7600
+}
+
+.subNavBtnLoggedIn #deleteAccount:hover {
+	cursor: pointer
+}
+
+.dropdowns:hover .subNavBtn ,.dropdowns:hover .subNavBtn-engi, .dropdowns:hover .subNavBtn-master {
+	height: auto;
+	width: auto;
+	display: inline-flex
+}
+.dropdowns:hover {
+	color: #9e9ee9
+}
+
+.dropdowns:hover .subNavBtnLoggedIn {
+	height: auto;
+	width: -webkit-fit-content;
+	width: fit-content
+}
+
+.dropdowns:hover .subNavBtnLoggedIn li {
+	padding: .25vw;
+	display: flex
+}
+
+#middle-nav {
+	margin-left: auto;
+	overflow: hidden;
+}
+
+#left-nav {
+	align-self: flex-start
+}
+
+#right-nav{
+	margin-left: auto;
+}
+#right-nav-container{
+	display: flex;
+	width: 20vw;
+}
+#right-nav-container .dropdowns{
+	margin-top: 1.3vh;
+}
+.logo {
+	height: 5vh;
+	width: 10vw;
+	margin-top: 8%;
+	margin-left: 5%;
+	margin-bottom: 5%
+}
+
+#logout {
+	color: #fff;
+	background: none
+}
+
+#logout:hover {
+	color: red
+}
+
+.styled-buttons {
+	background: none;
+	text-align: left;
+	color: #000;
+	text-decoration: none;
+	font-size: 1vw;
+	white-space: nowrap;
+	padding: .04vw;
+}
+
+.styled-buttons:hover {
+	background: none;
+	color: #ff9862
+}
+
+.faculty {
+	border-bottom: .25vw solid #ff7600;
+	border-top: .25vw solid #ff7600
+}
+
+.title, .title-engi {
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	border-bottom: .5vh solid #ff7600;
+	max-height:9vh;
+	overflow: hidden;
+}
+.professor {
+	color: #3498db;
+	font-size: .8vw;
+	padding: 1.5vw;
+	display: block;
+}

@@ -1,0 +1,170 @@
+.faculties {
+	width: auto;
+	height: 95vh;
+	overflow: hidden
+}
+
+.bar {
+	width: 2vw;
+	height: .5vh;
+	margin-right: 1%;
+	cursor: pointer;
+	background: #fff
+}
+
+.faculty-logo-container {
+	margin-top: 2.5vh;
+	background: #3498db
+}
+
+.faculty-logo-container #faculty-logo {
+	width: 45vw;
+	height: 75vh
+}
+
+.faculties-outer {
+	height: 100vh;
+	background: #000
+}
+
+.faculty-class-outer {
+	margin-top: 0;
+	padding: 0
+}
+
+.faculty-class-inner {
+	display: flex;
+	width: 57vw;
+	height: 18.5vh;
+	margin: .5% auto
+}
+
+.faculty-class-inner-inner {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 50%;
+	position: relative;
+	transition: left 1s ease, width 1s, border 1s;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	border-color: #fff;
+	border-style: solid double;
+	border-width: .25vw .7vh
+}
+
+.faculty-class-inner-inner h3,
+.faculty-class-inner-inner i,
+.faculty-class-inner-inner p {
+	margin: 0;
+	padding: .6vh
+}
+
+.faculty-class-inner-inner h3 {
+	margin-top: 4%;
+	transition: margin-top 1s
+}
+
+.faculty-class-dropdown {
+	visibility: hidden;
+	overflow: hidden;
+	position: relative;
+	width: 0;
+	transition: all 1s ease, visibility 0s;
+}
+
+.faculty-class-inner:hover>.faculty-class-dropdown {
+	visibility: visible;
+	left: 0;
+	width: 65%;
+	display: block;
+	background: #cc7a7a;
+	overflow: auto;
+	color: #000;
+	border-top: .5vh solid #000;
+	border-bottom: .5vh solid #000
+}
+
+.faculty-class-inner:hover>.faculty-class-inner-inner {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+	border-right: .25vw dotted #fff;
+	width: 35%
+}
+
+.faculty-class-inner:hover>.faculty-class-inner-inner h3 {
+	margin-top: 10%
+}
+
+.slides-navigation {
+	position: relative;
+	left: 45vw;
+	bottom: 5vh;
+	display: flex
+}
+
+.slide {
+	-webkit-animation: colorchange 175s linear 1s infinite;
+	animation: colorchange 175s linear 1s infinite;
+	border-top: .25vh solid #000;
+	padding-top: 1.25vh;
+	text-align: center;
+	width: 100vw;
+	transition: 1s
+}
+
+.slides {
+	background: #000;
+	width: 500vw;
+	height: 95vh;
+	display: flex
+}
+
+.slide .styled-buttons {
+	color: #fff;
+	display: block;
+	text-align: center
+}
+
+.slide .styled-buttons:hover {
+	color: orange
+}
+
+.slides-arrows #right {
+	right: -90vw
+}
+
+.slides-arrows #left,
+.slides-arrows #right {
+	position: relative;
+	font-size: 2vw;
+	color: #fff;
+	bottom: 50vh
+}
+
+.slides-arrows #left {
+	right: -5vw
+}
+
+#left:hover,
+.slides-arrows #right:hover {
+	cursor: pointer;
+	color: silver
+}
+
+.r1:checked~.s1 {
+	margin-left: 0
+}
+
+.r2:checked~.s1 {
+	margin-left: -20%
+}
+
+.r3:checked~.s1 {
+	margin-left: -40%
+}
+
+.r4:checked~.s1 {
+	margin-left: -60%
+}

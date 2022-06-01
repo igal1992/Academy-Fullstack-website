@@ -1,16 +1,16 @@
 import './App.css';
 import {Route, BrowserRouter as Router} from 'react-router-dom';
-import LoginScreen from "./LoginScreen";
-import itTeam from "./itTeam";
-import register from "./register";
-import TopNav from "./topNav";
-import Bachelors from "./Bachelors";
-import Masters from "./Masters";
-import Engineering from "./engineering";
 import { createBrowserHistory } from "history";
 import * as React from "react";
-import Home from "./Home";
-import down from './down';
+import LoginScreen from "./pages/login/LoginScreen";
+import itTeam from "./pages/it_team/itTeam";
+import register from "./pages/register/register";
+import TopNav from "./components/topNav";
+import Bachelors from "./pages/bachelors/Bachelors";
+import Masters from "./pages/masters/Masters";
+import Engineering from "./pages/engineering/engineering";
+import Home from "./pages/home/Home";
+import down from './pages/down/down';
 export const history = createBrowserHistory();
 
 class App extends React.Component{

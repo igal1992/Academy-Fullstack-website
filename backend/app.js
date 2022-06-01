@@ -1,16 +1,19 @@
 const express = require("express");
-const port = process.env.PORT || 8080;
 const app = express();
+//משתמשים בכדי לפצל את קבצי הניתוב בצורה יעילה ומ=הירה יותר כמו השם שלו
+const port = process.env.PORT || 8080;
 const cors = require("cors");
+//מאפשר גישה לקבלת בקשות post get delete .... 
+//דרד שני פורטים שונים או יותר מכיוון שיש צורך להגן מבקשות שלא נשלחות מהדומיין של הצד לקוח
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
+//מאפשר המרה של מבנים גייסון קוקיז סטרינגים
 const student = require("./routers/Student");
 const account_description = require("./routers/AccountDescription");
 const course = require("./routers/Course");
 const department = require("./routers/Department");
 const instructor = require("./routers/Instructor");
 const user = require("./routers/User");
-const oneDay = 1000 * 24 * 60 * 60;
 require('dotenv').config();
 
 
@@ -19,7 +22,7 @@ require('dotenv').config();
 //https://blacknightacademy.netlify.app
 //https://blacknightacademy.herokuapp.com
 app.use(cors({
-    origin: 'https://igalacademy.herokuapp.com',
+    origin: 'http://localhost:3000',
     methods: ['POST', 'PUT', 'GET', 'OPTIONS', 'HEAD'],
     credentials: true
   }));
